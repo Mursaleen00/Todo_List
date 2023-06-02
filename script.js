@@ -10,6 +10,7 @@ function addtodo() {
     else {
         // li create
         let li = document.createElement("li");
+        li.setAttribute('class', 'arrange')
 
         // delete button 
         let delet = document.createElement('button');
@@ -34,6 +35,9 @@ function addtodo() {
             input.value = li.textContent;
             ul.removeChild(li);
         });
+        //create a div
+        let testDiv = document.createElement('div');
+
 
         // Css
         edit.style.marginRight = "5px";
@@ -41,12 +45,14 @@ function addtodo() {
 
 
         // appendChild        
+        testDiv.appendChild(delet)
+        testDiv.appendChild(edit)
         ul.appendChild(li);
-        delet.appendChild(delet_i);
-        edit.appendChild(edit_i);
-        li.appendChild(delet);
-        li.appendChild(edit);
         li.appendChild(input_text);
+        // li.appendChild(delet);
+        li.appendChild(testDiv);
+        edit.appendChild(edit_i);
+        delet.appendChild(delet_i);
 
 
         input.value = "";

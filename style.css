@@ -31,6 +31,12 @@ body {
   border: 2px solid #d2daff;
   margin: 5px;
 }
+.arrange{
+
+/* border: 1px solid black; */
+display: flex;
+justify-content: space-between;
+}
 
 .box {
   display: inline-block;
