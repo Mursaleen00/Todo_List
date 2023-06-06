@@ -1,6 +1,9 @@
 let input = document.getElementById('todo');
 let ul = document.getElementById("ul");
 
+function deleteAll() {
+ ul.innerHTML = " ";
+}
 
 function addtodo() {
 
@@ -37,22 +40,22 @@ function addtodo() {
         });
         //create a div
         let testDiv = document.createElement('div');
-
+        testDiv.setAttribute("class", "div1")
 
         // Css
         edit.style.marginRight = "5px";
         delet.style.marginRight = "5px";
 
-
+       
         // appendChild        
-        testDiv.appendChild(delet)
-        testDiv.appendChild(edit)
         ul.appendChild(li);
-        li.appendChild(input_text);
-        // li.appendChild(delet);
-        li.appendChild(testDiv);
+        // li.appendChild(testDiv);
+        li.appendChild(delet)
+        li.appendChild(edit)
         edit.appendChild(edit_i);
         delet.appendChild(delet_i);
+        li.appendChild(input_text);
+        // li.appendChild(delet);
 
 
         input.value = "";
